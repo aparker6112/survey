@@ -1,65 +1,25 @@
 <div class="jumbotron" id="survey-header">
-	<h3 id="header-text">Survey</h3>
+	<h3 id="header-text">Feedback</h3>
 </div>
+<%= form_for @question do |q| %>
 <div id="survey-body">
 	<div align="center">
 		<span class="help-block">This survey is being used for coursework and feedback purposes, this will be completely anonymous.<br>
 		   On the questions below please select between 1-10. 1 being the lowest 10 being the highest.<br> Each question can be answered overwise you can not submit your feedback.</span>
 	<span id="survey-questions">A random question here answer to the right.</span>
-  <select>
-  	<option value="1">1</option>
-  	<option value="2">2</option>
-  	<option value="3">3</option>
-  	<option value="4">4</option>
-  	<option value="5">5</option>
-  	<option value="6">6</option>
-  	<option value="7">7</option>
-  	<option value="8">8</option>
-  	<option value="9">9</option>
-  	<option value="10">10</option>
-  </select><hr />
+  <%= q.select(:question_one, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
 	<span id="survey-questions">A random question here answer to the right.</span>
-  <select>
-  	<option value="1">1</option>
-  	<option value="2">2</option>
-  	<option value="3">3</option>
-  	<option value="4">4</option>
-  	<option value="5">5</option>
-  	<option value="6">6</option>
-  	<option value="7">7</option>
-  	<option value="8">8</option>
-  	<option value="9">9</option>
-  	<option value="10">10</option>
-  </select><hr />
+  <%= q.select(:question_two, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
 	<span id="survey-questions">A random question here answer to the right.</span>
-  <select>
-  	<option value="1">1</option>
-  	<option value="2">2</option>
-  	<option value="3">3</option>
-  	<option value="4">4</option>
-  	<option value="5">5</option>
-  	<option value="6">6</option>
-  	<option value="7">7</option>
-  	<option value="8">8</option>
-  	<option value="9">9</option>
-  	<option value="10">10</option>
-  </select><hr />
+  <%= q.select(:question_three, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
-	<span id="survey-questions">A random question here answer to the right.</span>
-  <select>
-  	<option value="1">1</option>
-  	<option value="2">2</option>
-  	<option value="3">3</option>
-  	<option value="4">4</option>
-  	<option value="5">5</option>
-  	<option value="6">6</option>
-  	<option value="7">7</option>
-  	<option value="8">8</option>
-  	<option value="9">9</option>
-  	<option value="10">10</option>
-  </select><hr />
+  <span id="survey-questions">A random question here answer to the right.</span>
+  <%= q.select(:question_four, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
+
+  <span id="survey-questions">A random question here answer to the right.</span>
+  <%= q.select(:question_five, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
   <span id="survey-questions">A random question here answer below.</span><br>
   <textarea rows="4" cols="50" type="textfield" placeholder="Enter text"></textarea><hr />
@@ -67,6 +27,7 @@
   <span id="survey-questions">A random question here answer below.</span><br>
   <textarea rows="4" cols="50" type="textfield" placeholder="Enter text"></textarea><br>
 
-  <button class="btn btn-lg btn-primary" disabled="true">Submit</button>
+  <%= q.submit(class: 'btn btn-lg btn-primary') %>
 </div>
+<% end %>
 </div>
