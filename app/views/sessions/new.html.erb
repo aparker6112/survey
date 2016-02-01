@@ -1,0 +1,11 @@
+<div class="jumbotron" id="survey-header">
+	<h3 id="header-text">Log in</h3>
+</div>
+
+<%= form_tag '/login' do %>
+<div align="center">
+	Username: <%= text_field_tag :username %><br>
+	Password: <%= password_field_tag :password %><br>
+	<%= submit_tag 'Submit' %>
+</div>
+<% end %>
