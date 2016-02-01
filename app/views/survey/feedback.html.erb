@@ -1,0 +1,38 @@
+<div class="jumbotron" id="survey-header">
+	<h3 id="header-text">Feedback list</h3>
+</div>
+<% @feedback.each do |f| %>
+<div class="well well-sm" id="well-background">
+	<div class="panel panel-default">
+		<div class="panel-heading">First question</div>
+			<div class="panel-body">
+				<%= f.question_one %>
+			</div>
+		</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">second question</div>
+			<div class="panel-body">
+				<%= f.question_two %>
+			</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Third question</div>
+			<div class="panel-body">
+				<%= f.question_three %>
+				</div>
+		</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Fourth question</div>
+			<div class="panel-body">
+				<%= f.question_four %>
+			</div>
+		</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Fifth question</div>
+			<div class="panel-body">
+				<%= f.question_five %>
+				</div>
+			</div>
+</div>
+<div id="line-break"></div>
+<% end %>
