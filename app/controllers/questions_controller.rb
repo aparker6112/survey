@@ -3,10 +3,11 @@ class QuestionsController < ApplicationController
 		@question = Question.new(question_params)
 		if @question.save
 			p 'SAVED'
+			redirect_to thanks_path
 		else
 			p 'FAILED'
+			redirect_to root_path
 		end
-		redirect_to root_path
 	end
 
 
