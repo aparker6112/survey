@@ -4,8 +4,22 @@
 #survey-header {
 	background-color: #3333ff;
 }
-
 #header-text {
 	color: white;
-	font-size: 2em;
+	font-size: 3em;
+}
+#survey-questions {
+	padding-right: 15px;
+	padding-bottom: 20px;
+	font-size: 1.8em;
+}
+
+hr {
+	width: 75%;
+}
+
+select {
+	width: 5%;
+	height: 5%;
+	text-align: center;
 }
