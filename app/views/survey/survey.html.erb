@@ -22,10 +22,10 @@
   <%= q.select(:question_five, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
   <span id="survey-questions">A random question here answer below.</span><br>
-  <textarea rows="4" cols="50" type="textfield" placeholder="Enter text"></textarea><hr />
+  <%= q.text_area(:question_six, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
   <span id="survey-questions">A random question here answer below.</span><br>
-  <textarea rows="4" cols="50" type="textfield" placeholder="Enter text"></textarea><br>
+  <%= q.text_area(:question_seven, rows: 4, cols: 50, placeholder: 'enter comment') %><br>
 
   <%= q.submit(class: 'btn btn-lg btn-primary', :disabled => @questions.count >= 5) %>
   <div class="help-block">If this button is disabled this means that everyone has done the survey, which means no one else can give anymore feedback.</div>
