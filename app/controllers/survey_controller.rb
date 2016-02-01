@@ -6,4 +6,9 @@ class SurveyController < ApplicationController
 
 	def thanks
 	end
+
+	def feedback
+		redirect_to root_path if !logged_in?
+		@feedback = Question.all
+	end
 end
