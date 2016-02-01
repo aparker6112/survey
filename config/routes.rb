@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root 'survey#survey'
   get '/thanks', to: 'survey#thanks'
+  get '/secretfeedback', to: 'survey#feedback'
 
   get '/secretloginpageforwebsite/plot.twist/getatyaboy', to: 'sessions#new'
   post '/login', to: 'sessions#login'
-  get '/secretlogutpageforwebsite/plot.twist/getawayyaboy', to: 'sessions#destroy'
+  get '/secretlogoutpageforwebsite/plot.twist/getawayyaboy', to: 'sessions#destroy'
   resources :questions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
