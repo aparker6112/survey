@@ -1,28 +1,12 @@
-== README
+This is the github repo for the Survey application. 
+To maintain good quality and practice we shall be following a standard for testing and managing the deploys.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+When submitting a pull request please merge into the 'test' branch, this will be deployed to a heroku app for testing,
+when it is okay and ready for a production deploy we will merge the 'test' branch into 'master' and then deploy to master.
 
-Things you may want to cover:
+The branch/tag names shall follow as followed:
 
-* Ruby version
+Branches begining with S- are for Survey changes and fixes, this is the main app changes - so we can identify these better.
+Branches begining with E- are emergency changes and fixes, this is for emergency's only, this means if something is an uregent deploy we can see this and merge it faster.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Branches with the E- tag will be merged into the 'emergency' branch - which is also tested on a server - then released ASAP.
