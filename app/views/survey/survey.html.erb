@@ -27,7 +27,8 @@
   <span id="survey-questions">A random question here answer below.</span><br>
   <textarea rows="4" cols="50" type="textfield" placeholder="Enter text"></textarea><br>
 
-  <%= q.submit(class: 'btn btn-lg btn-primary') %>
+  <%= q.submit(class: 'btn btn-lg btn-primary', :disabled => @questions.count >= 6) %>
+  <div class="help-block">If this button is disabled this means that everyone has done the survey, which means no one else can give anymore feedback.</div>
 </div>
 <% end %>
 </div>

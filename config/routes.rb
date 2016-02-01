@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'survey#survey'
-
+  get '/thanks', to: 'survey#thanks'
 
   resources :questions
   # The priority is based upon order of creation: first created -> highest priority.
