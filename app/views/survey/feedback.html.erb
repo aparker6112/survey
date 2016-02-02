@@ -4,6 +4,9 @@
 <% if @feedback.count > 0 %>
 <% @feedback.each do |f| %>
 <div class="well well-sm" id="well-background">
+<div align="right">
+	<%= link_to 'Delete all', secretdestroyfeed_path, method: :post %>
+</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">Name:</div>
 			<div class="panel-body">

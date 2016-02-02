@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'survey#survey'
   get '/thanks', to: 'survey#thanks'
   get '/secretfeedback', to: 'survey#feedback'
+  post '/secretdestroyfeed', to: 'survey#feedback_destroy'
 
   get '/secretloginpageforwebsite/plot.twist/getatyaboy', to: 'sessions#new'
   post '/login', to: 'sessions#login'
