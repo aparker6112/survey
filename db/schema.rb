@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 20160202110556) do
 
   create_table "questions", force: :cascade do |t|
     t.integer  "question_one",   default: 5
-    t.integer  "question_two",   default: 5
-    t.integer  "question_three", default: 5
-    t.integer  "question_four",  default: 5
-    t.integer  "question_five",  default: 5
+    t.string   "question_two"
+    t.string   "question_three"
+    t.string   "question_four"
+    t.string   "question_five"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "question_six"
