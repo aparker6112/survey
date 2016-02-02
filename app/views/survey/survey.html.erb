@@ -4,12 +4,16 @@
 <%= form_for @question do |q| %>
 <div id="survey-body">
 	<div align="center">
-		<span class="help-block">This survey is being used for coursework and feedback purposes, this will be completely anonymous.<br>
-		   On the questions below please select between 1-10. 1 being the lowest 10 being the highest.<br> Each question can be answered overwise you can not submit your feedback.</span>
-	<span id="survey-questions">A random question here answer to the right.</span>
+		<span class="help-block">This survey is being used for coursework and feedback purposes. Any feedback given will be used for my coursework.<br>
+		   On the questions below please select between 1-10, 1 being the lowest 10 being the highest.<br> Each question can be answered overwise you can not submit your feedback.</span>
+
+  <span id="survey-questions">Name.</span>
+  <%= q.text_field(:name, placeholder: 'Enter your name') %><hr />
+
+	<span id="survey-questions">How would you rate my performance?</span>
   <%= q.select(:question_one, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
-	<span id="survey-questions">A random question here answer to the right.</span>
+	<span id="survey-questions">How would you rate how fast I learn?</span>
   <%= q.select(:question_two, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
 	<span id="survey-questions">A random question here answer to the right.</span>
@@ -21,7 +25,7 @@
   <span id="survey-questions">A random question here answer to the right.</span>
   <%= q.select(:question_five, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
-  <span id="survey-questions">A random question here answer below.</span><br>
+  <span id="survey-questions">Could you provide an example of when I have recognised and respected diversity and individuals differences & perspective?</span><br>
   <%= q.text_area(:question_six, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
   <span id="survey-questions">A random question here answer below.</span><br>
