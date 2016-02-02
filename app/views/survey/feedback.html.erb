@@ -3,6 +3,7 @@
 </div>
 <% if @feedback.count > 0 %>
 <div align="right">
+	<%= link_to "CSV", getfeedback_path(format: "csv"), class: 'btn btn-primary', id: 'csv-button' %>
 	<%= link_to 'Delete all', secretdestroyfeed_path, method: :post, class: 'btn btn-primary', id: 'destroy-button', data: { confirm: 'Are you sure you want to delete all the feedback?' } %>
 </div>
 <% @feedback.each do |f| %>
