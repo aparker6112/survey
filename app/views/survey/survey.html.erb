@@ -33,18 +33,3 @@
 </div>
 <% end %>
 </div>
-
-    sfobject = client.upsert!(member_object, 'booking_BookingBug_Id__c' {
-        booking_First_Name__c: m.first_name,
-        booking_Last_Name__c: m.last_name,
-        booking_Email__c: m.email,
-        booking_Phone__c: m.phone,
-        booking_Mobile_phone__c: m.mobile,
-        booking_Address1__c: m.address1,
-        booking_Address2__c: m.address3,
-        booking_Address3__c: m.address4,
-        booking_Postcode__c: m.postcode,
-        booking__Country__c: m.country,
-        booking_BookingBug_Id__c: m.id,
-      })
-  end
