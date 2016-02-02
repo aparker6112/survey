@@ -5,7 +5,13 @@
 <% @feedback.each do |f| %>
 <div class="well well-sm" id="well-background">
 	<div class="panel panel-default">
-		<div class="panel-heading">First question</div>
+		<div class="panel-heading">Name:</div>
+			<div class="panel-body">
+				<%= f.name %>
+			</div>
+		</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">How would you rate my performance?</div>
 			<div class="panel-body">
 				<%= f.question_one %>
 			</div>
@@ -35,7 +41,7 @@
 				</div>
 			</div>
 	<div class="panel panel-default">
-		<div class="panel-heading">Sixth question</div>
+		<div class="panel-heading">Could you provide an example of when I have recognised and respected diversity and individuals differences & perspective?</div>
 			<div class="panel-body">
 				<%= f.question_six %>
 				</div>

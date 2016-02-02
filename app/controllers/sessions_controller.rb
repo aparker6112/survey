@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 	def new
+		redirect_to secretfeedback_path if logged_in?
 	end
 
 	def login
