@@ -19,5 +19,14 @@ class SurveyController < ApplicationController
 		end
 			redirect_to secretfeedback_path
 	end
+
+	def feedback_csv
+		@feedback = Question.all
+
+		respond_to do |format|
+			format.html
+			format.csv { send_data @feedback.to_csv, filename: "feedback-#{Date.today}.csv"}
+		end
+	end
 	
 end

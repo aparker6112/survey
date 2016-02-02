@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/thanks', to: 'survey#thanks'
   get '/secretfeedback', to: 'survey#feedback'
   post '/secretdestroyfeed', to: 'survey#feedback_destroy'
+  get '/getfeedback', to: 'survey#feedback_csv'
 
   get '/secretloginpageforwebsite/plot.twist/getatyaboy', to: 'sessions#new'
   post '/login', to: 'sessions#login'
