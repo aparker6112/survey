@@ -4,7 +4,7 @@
 <%= form_for @question do |q| %>
 <div id="survey-body">
 	<div align="center">
-		<span class="help-block">This survey is being used for coursework and feedback purposes. Any feedback given will be used for my coursework.<br>
+		<span class="help-block">
 		   On the questions below please select between 1-10, 1 being the lowest 10 being the highest.<br> Each question can be answered overwise you can not submit your feedback.</span>
 
   <span id="survey-questions">Name.</span>
@@ -28,7 +28,7 @@
   <span id="survey-questions">Can you think of any time where I have accepted and provided feedback in a constructive and considerate way?</span><br>
   <%= q.text_area(:question_seven, rows: 4, cols: 50, placeholder: 'enter comment') %><br>
 
-  <%= q.submit(class: 'btn btn-lg btn-primary', :disabled => @questions.count >= 5) %>
+  <%= q.submit(class: 'btn btn-lg btn-primary', :disabled => @questions.count >= 15) %>
   <div class="help-block">If this button is disabled this means that everyone has done the survey, which means no one else can give anymore feedback.</div>
 </div>
 <% end %>
