@@ -4,6 +4,9 @@
 <% if @feedback.count > 0 %>
 <% @feedback.each do |f| %>
 <div class="well well-sm" id="well-background">
+<div align="right">
+	<%= link_to 'Delete all', secretdestroyfeed_path, method: :post %>
+</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">Name:</div>
 			<div class="panel-body">
@@ -17,29 +20,23 @@
 			</div>
 		</div>
 	<div class="panel panel-default">
-		<div class="panel-heading">second question</div>
+		<div class="panel-heading">What have I been doing well at?</div>
 			<div class="panel-body">
 				<%= f.question_two %>
 			</div>
 	</div>
 	<div class="panel panel-default">
-		<div class="panel-heading">Third question</div>
+		<div class="panel-heading">What could I improve at?</div>
 			<div class="panel-body">
 				<%= f.question_three %>
 				</div>
 		</div>
 	<div class="panel panel-default">
-		<div class="panel-heading">Fourth question</div>
+		<div class="panel-heading">Do you think I have effectively planned and managed my own time? If yes, how have I done this?</div>
 			<div class="panel-body">
 				<%= f.question_four %>
 			</div>
 		</div>
-	<div class="panel panel-default">
-		<div class="panel-heading">Fifth question</div>
-			<div class="panel-body">
-				<%= f.question_five %>
-				</div>
-			</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">Could you provide an example of when I have recognised and respected diversity and individuals differences & perspective?</div>
 			<div class="panel-body">
@@ -47,7 +44,7 @@
 				</div>
 			</div>
 	<div class="panel panel-default">
-		<div class="panel-heading">Seventh question</div>
+		<div class="panel-heading">Can you think of any time where I have accepted and provided feedback in a constructive and considerate way?</div>
 			<div class="panel-body">
 				<%= f.question_seven %>
 				</div>

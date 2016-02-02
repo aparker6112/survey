@@ -13,22 +13,19 @@
 	<span id="survey-questions">How would you rate my performance?</span>
   <%= q.select(:question_one, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
 
-	<span id="survey-questions">How would you rate how fast I learn?</span>
-  <%= q.select(:question_two, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
+	<span id="survey-questions">What have I been doing well at?</span><br>
+  <%= q.text_area(:question_two, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
-	<span id="survey-questions">A random question here answer to the right.</span>
-  <%= q.select(:question_three, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
+	<span id="survey-questions">What could I improve at?</span><br>
+  <%= q.text_area(:question_three, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
-  <span id="survey-questions">A random question here answer to the right.</span>
-  <%= q.select(:question_four, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
-
-  <span id="survey-questions">A random question here answer to the right.</span>
-  <%= q.select(:question_five, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) %><hr />
+  <span id="survey-questions">Do you think I have effectively planned and managed my own time? If yes, how have I done this? If no skip this question.</span><br>
+  <%= q.text_area(:question_four, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
   <span id="survey-questions">Could you provide an example of when I have recognised and respected diversity and individuals differences & perspective?</span><br>
   <%= q.text_area(:question_six, rows: 4, cols: 50, placeholder: 'enter comment') %><hr />
 
-  <span id="survey-questions">A random question here answer below.</span><br>
+  <span id="survey-questions">Can you think of any time where I have accepted and provided feedback in a constructive and considerate way?</span><br>
   <%= q.text_area(:question_seven, rows: 4, cols: 50, placeholder: 'enter comment') %><br>
 
   <%= q.submit(class: 'btn btn-lg btn-primary', :disabled => @questions.count >= 5) %>
@@ -36,3 +33,18 @@
 </div>
 <% end %>
 </div>
+
+    sfobject = client.upsert!(member_object, 'booking_BookingBug_Id__c' {
+        booking_First_Name__c: m.first_name,
+        booking_Last_Name__c: m.last_name,
+        booking_Email__c: m.email,
+        booking_Phone__c: m.phone,
+        booking_Mobile_phone__c: m.mobile,
+        booking_Address1__c: m.address1,
+        booking_Address2__c: m.address3,
+        booking_Address3__c: m.address4,
+        booking_Postcode__c: m.postcode,
+        booking__Country__c: m.country,
+        booking_BookingBug_Id__c: m.id,
+      })
+  end
