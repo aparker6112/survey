@@ -1,0 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#well-background {
+	background-color: black;
+}
+
+#line-break {
+	border-top: 25px solid darkgreen;
+	padding-bottom: 25px;
+}
+
+#feedback-none {
+	letter-spacing: -0.1em;
+	text-decoration: underline;
+}
