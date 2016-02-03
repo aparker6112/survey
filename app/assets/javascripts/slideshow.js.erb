@@ -1,0 +1,18 @@
+$(document).ready(
+function slider() {
+	$(".slideshow #1").fadeIn(500);
+	$(".slideshow #1").delay(5500).fadeOut(500);
+	var sc = $(".slideshow img").size();
+	var count = 2;
+
+	setInterval(function () {
+		$(".slideshow #"+count).fadeIn(200);
+		$(".slideshow #"+count).delay(5500).fadeOut(500);
+		if(count == sc){
+			count = 1;
+		} else {
+			count = count + 1;
+		}
+	}, 6500);
+}
+);
