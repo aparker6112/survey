@@ -21,6 +21,7 @@ class SurveyController < ApplicationController
 	end
 
 	def feedback_csv
+		return redirect_to root_path if !logged_in?
 		@feedback = Question.all
 
 		respond_to do |format|

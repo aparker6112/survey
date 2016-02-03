@@ -1,0 +1,20 @@
+<style type="text/css">
+.slideshow {
+	width: 800px;
+	height: 350px;
+	overflow: hidden;
+	margin: 30px auto;
+}
+.slideshow img {
+	width: 800px;
+	height: 350px;
+	display: none;
+}
+</style>
+
+<div class="slideshow">
+	<img id="1" src="<%= asset_path( 'img1.JPG' ) %>" border="0" alt="image one" />
+	<img id="2" src="<%= asset_path( 'img2.JPG' ) %>" border="0" alt="image two"/>
+	<img id="3" src="<%= asset_path( 'img3.JPG' ) %>" border="0" alt="image three"/>
+	<img id="4" src="<%= asset_path( 'img4.JPG' ) %>" border="0" alt="image four"/>
+</div>
